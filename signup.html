@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="favicon" rel="shortcut icon" type="image/x-icon" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #000;
+    }
+
+    .topnav {
+      overflow: hidden;
+      background-color: #000;
+      position: relative;
+      top: 0;
+      width: 100%;
+    }
+
+    .topnav a {
+      float: right;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 20px;
+      padding-top: 45px;
+      text-decoration: none;
+      font-size: 30px;
+    }
+
+    .topnav a:hover {
+      color: #03913e;
+    }
+
+    .topnav a.active {
+      background-color: #03913e;
+      color: #03913e;
+    }
+
+    .topnav .icon {
+      display: none;
+    }
+
+    @media screen and (max-width: 600px) {
+      .topnav a:not(:first-child) {
+        display: none;
+      }
+      .topnav a.icon {
+        float: right;
+        display: block;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .topnav.responsive {
+        position: relative;
+      }
+      .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+    }
+    footer {
+      text-align: center;
+      padding: 3px;
+      background-color: #f2f2f2;
+      color: #000;
+    }
+    .login {
+      text-align: center;
+      border: solid;
+      border-width: 2px;
+      border-collapse: collapse;
+      display: grid;
+      grid-row: 1;
+      justify-content: center;
+      background: #03913e;
+      padding: 3vw 3vw;
+      width: 90%;
+      max-width: 600px;
+      border-radius: 2em;
+      margin: 0 auto;
+    }
+    .login input {
+      border: solid #000 2px;
+
+      background-color: #fff;
+      color: black;
+      height: 30px;
+      width: 225px;
+      font-size: 16px;
+    }
+    .login button {
+      height: 50px;
+      width: 250px;
+      border: solid black 2px;
+      border-radius: 2em;
+      font-size: 25px;
+      color: #ddd;
+      background-color: #000;
+    }
+    .logo {
+      width: 310px;
+      padding: 20px;
+      height: 100px;
+    }
+    .tab {
+      background: #000;
+      text-align: center;
+    }
+    .tab button {
+      text-align: center;
+      background-color: inherit;
+      float: none;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 50px;
+      color: #ffffff;
+      margin: 0 auto;
+    }
+    .tab button:hover {
+      color: #03913e;
+    }
+    .tab button.active {
+      background-color: #ddd;
+    }
+    .tabcontent {
+      display: none;
+      padding: 6px 12px;
+      border-top: none;
+      background-color: #000;
+      color: #000;
+    }
+    .social {
+      font-size: 16px;
+      background-color: #f2f2f2;
+    }
+    .image{
+      text-align: center;
+      justify-content: center;
+      margin: 0 auto;
+    }
+  </style>
+  <body>
+    <div class="topnav" id="myTopnav">
+      <img class="logo" src="logo/Capture1logoresized.PNG" alt="logo" />
+
+      <a href="SignUp.html"> Sign Up </a>
+      <a href="about.html"> About </a>
+      <a href="platform.html"> LuckyLearning </a>
+      <a href="whitepaper.html">  Whitepaper </a>
+      <a href="home.html"> Home</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <h1
+      style="
+        text-align: center;
+        text-decoration: double;
+        color: #ffffff;
+        font-size: 55px;
+      "
+    >
+      Be Part of The Luckycoin Team!
+    </h1>
+    <br /><br />
+    
+    <div class="tab">
+      <button class="tablinks" onclick="OpenMovie(event,'SignUp')">
+        Sign Up /
+      </button>
+      <button class="tablinks" onclick="OpenMovie(event,'Login')">Login</button>
+    </div>
+   
+    <div id="SignUp" class="tabcontent" class="contentB">
+      <div class="login">
+        <form action="signup">
+          <h1>Sign Up:</h1>
+          <br /><br />
+          <h1>Username:</h1>
+          <input type="text" name="Username" id="Username" />
+          <h1>Email:</h1>
+          <input type="email" name="email" id="email" />
+          <h1>Password:</h1>
+          <input type="password" name="password" id="password" />
+          <br /><br /><br />
+          <button id="Continue">Continue</button>
+        </form>
+      </div>
+    </div>
+    <div id="Login" class="tabcontent" class="contentO">
+      <div class="login">
+        <form action="signup">
+          <h1>Login:</h1>
+          <br /><br />
+          <h1>Email:</h1>
+          <input type="email" name="email" id="email" />
+          <h1>Password:</h1>
+          <input type="password" name="password" id="password" />
+          <br /><br /><br />
+          <button id="Continue">Continue</button>
+        </form>
+      </div>
+    </div>
+    <br><br>
+    <div class="image">
+      <img  src="images/blockchain750x450.jpg" alt="">
+      </div>
+    <br /><br /><br /><br /><br /><br />
+    <div id="SignUp" class="tabcontent" class="contentB">
+      <div class="login">
+        <form action="signup">
+          <h1>Sign Up:</h1>
+          <br /><br />
+          <h1>Username:</h1>
+          <input type="text" name="Username" id="Username" />
+          <h1>Email:</h1>
+          <input type="email" name="email" id="email" />
+          <h1>Password:</h1>
+          <input type="password" name="password" id="password" />
+          <br /><br /><br />
+          <button id="Continue">Continue</button>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+    <br><br>
+      <div class="social">
+        <p>Romania, Europe</p>
+        <p>luckycoin.token@gamil.com</p>
+      </div>
+      <div style="border: solid #ccc 1px; margin: 0 auto;">
+      <p style="font-size: 13px;">All rights reserved:</p>
+      <a style="font-size: small;" href="https://luckycoin.info/"
+        >Luckycoin 2023 ®</a
+      >
+    </div>
+    </footer>
+  </body>
+  <script>
+    function OpenMovie(evt, movieName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      for (i = 0; i < tablinks.legth; i++) {
+        tablinks[i].className = tablinks[i].className.replace("active", "");
+      }
+      document.getElementById(movieName).style.display = "block";
+      evt.currentTarget.className += "active";
+    }
+  </script>
+</html>
