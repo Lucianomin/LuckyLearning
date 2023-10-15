@@ -21,7 +21,7 @@ background: linear-gradient(185deg, rgba(0,0,0,1) 15%, rgba(60,183,50,1) 55%, rg
       background-color: #000;
       position: relative;
       top: 0;
-      width: 45%;
+      width: 40%;
       margin: auto;
     }
 
@@ -81,69 +81,7 @@ background: linear-gradient(185deg, rgba(0,0,0,1) 15%, rgba(60,183,50,1) 55%, rg
 
       color: #fff
     }
-    .login {
-      text-align: center;
-      border: solid;
-      border-width: 2px;
-      border-collapse: collapse;
-      display: grid;
-      grid-row: 1;
-      justify-content: center;
-      background: #03913e;
-      padding: 3vw 3vw;
-      width: 90%;
-      max-width: 600px;
-      border-radius: 2em;
-      margin: 0 auto;
-    }
-    .login input {
-      border: solid #000 2px;
-
-      background-color: #fff;
-      color: black;
-      height: 30px;
-      width: 225px;
-      font-size: 16px;
-    }
-    .login button {
-      height: 50px;
-      width: 250px;
-      border: solid black 2px;
-      border-radius: 2em;
-      font-size: 25px;
-      color: #ddd;
-      background-color: #000;
-    }
-
-    .tab {
-      background: #000;
-      text-align: center;
-    }
-    .tab button {
-      text-align: center;
-      background-color: inherit;
-      float: none;
-      border: none;
-      outline: none;
-      cursor: pointer;
-      transition: 0.3s;
-      font-size: 50px;
-      color: #ffffff;
-      margin: 0 auto;
-    }
-    .tab button:hover {
-      color: #03913e;
-    }
-    .tab button.active {
-      background-color: #ddd;
-    }
-    .tabcontent {
-      display: none;
-      padding: 6px 12px;
-      border-top: none;
-      background-color: #000;
-      color: #000;
-    }
+    
     .social {
       font-size: 16px;
       background-color: #000;
@@ -153,12 +91,9 @@ background: linear-gradient(185deg, rgba(0,0,0,1) 15%, rgba(60,183,50,1) 55%, rg
       justify-content: center;
       margin: 0 auto;
     }
-    .logo {
-      justify-content: center;
-      text-align: center;
-    }
+ 
     .typing-container {
-    font-size: 60px;
+    font-size: 23px;
     white-space: nowrap;
     overflow: hidden;
     border-right: 2px solid #fff;
@@ -182,34 +117,48 @@ background: linear-gradient(185deg, rgba(0,0,0,1) 15%, rgba(60,183,50,1) 55%, rg
         border-color: #fff;
     }
 }
-.detail-container{
-  color: #fff;
-  font-size: 24px;
-  font-family:Arial, Helvetica, sans-serif;
-  margin-left: 3%;
-  margin-right: 3%;
-}
+
   </style>
   <body>
-    <div class="logo">
-      <br /><br />
-      <img
-        style="text-align: center"
-        src="logo/Capture1logoresized.PNG"
-        alt="logo"
-      />
-    </div>
-    <br /><br />
-    <div class="topnav" id="myTopnav">
-      <a href="SignUp.html"> Sign Up </a>
-      <a href="about.html"> About </a>
-      <a href="platform.html"> LuckyLearning </a>
-      <a href="whitepaper.html"> Whitepaper </a>
-      <a href="home.html"> Home </a>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
+  
+    <nav style="font-size: 24px; color: #fff; background-color: black; padding-left: 50px;padding-right: 50px;" class="flex flex-wrap items-center justify-between p-3 bg-teal-200">
+      <img src="logo/Capture1logoresized.PNG" class="logo" alt="ACME" width="200px" />
+      <div style="color:rgba(21,113,14,1) ;" class="flex md:hidden">
+          <button style="color:rgba(21,113,14,1) ;" id="hamburger">
+              
+            <img class="toggle block" src="icons/icons8-menu-48.png" width="40" height="40" />
+            <img class="toggle hidden" src="icons/icons8-multiply-48.png" width="40" height="40" />
+          </button>
+      </div>
+      <div style="color: #fff;"
+          class="toggle hidden w-full md:w-auto md:flex text-right text-bold mt-5 md:mt-0 border-t-2 border-blue-900 md:border-none">
+          <a style="color: #fff;" href="#"
+              class="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Home
+          </a>
+          <a style="color: #fff;" href="#"
+              class="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Products
+          </a>
+          <a style="color: #fff;" href="#"
+              class="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Pricing
+          </a>
+          <a style="color: #fff;" href="#"
+              class="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Contact
+          </a>
+      </div>
+      <a style="background-color:rgba(21,113,14,1);" href="#"
+          class="toggle hidden md:flex w-full md:w-auto px-4 py-2 text-right bg-blue-900 hover:bg-blue-500 text-white md:rounded">Create
+          Account
+  
       </a>
-    </div>
+  </nav>
+  <script>
+      document.getElementById("hamburger").onclick = function toggleMenu() {
+          const navToggle = document.getElementsByClassName("toggle");
+          for (let i = 0; i < navToggle.length; i++) {
+            navToggle.item(i).classList.toggle("hidden");
+          }
+        };
+  </script>
     <br />
     <br /><br /><br /><br /><br /><br />
     <h1
@@ -222,31 +171,14 @@ background: linear-gradient(185deg, rgba(0,0,0,1) 15%, rgba(60,183,50,1) 55%, rg
     >
     <div class="typing-container">
       <div class="text">
-        <p>Learn. Useful. Crypto. Knowledge.</p>
+        <p>Learn.Useful.Crypto.Knowledge</p>
       </div>
   </div>
     </h1>
     <br /><br /><br><br><br>
    
 
-  <div style="display: grid; grid-template-columns: repeat(3, 1fr); margin-left: 5%; margin-right: 5%; justify-content: center; align-items: center; text-align: center;">
-    <div style="text-align: left;">
-        <p>A New Start</p>
-        <p>Luckycoin is created for young people and students that want to invest in their future financial stability and learn more about technology</p>
-
-
-    </div>
-    <div class="2">
-        <p>Development</p>
-        <p>Luckycoin is using Binance Smart Chain(BEP-20) and zero transaction fees</p>
-    </div>
-    <div class="3">
-      <p>Future</p>
-        <p>Our  goal is to be known by each young entrepreneur or student from anywhere in the world and not only</p>
-    
-       
-    </div>
-</div>
+  
 
 <section>
   <div class="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl">
@@ -254,27 +186,27 @@ background: linear-gradient(185deg, rgba(0,0,0,1) 15%, rgba(60,183,50,1) 55%, rg
           <div class="p-6">
               <img class="object-cover object-center w-full mb-8 lg:h-48 md:h-36 rounded-xl" src="https://via.placeholder.com/150" alt="blog">
 
-              <h1 class="mx-auto mb-8 text-2xl font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl">Short headline.</h1>
-              <p class="mx-auto text-base leading-relaxed text-gray-500">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>                <div class="mt-4">
+              <h1 style="font-size: 40px; color: #fff;" class="mx-auto mb-8 text-2xl font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl">A New Start.</h1>
+              <p style="color: #f2f2f2;" class="mx-auto text-base leading-relaxed text-gray-500">
+                Luckycoin is created for young people and students that want to invest in their future financial stability and learn more about technology.</p>                <div class="mt-4">
                   <a href="#" class="inline-flex items-center mt-4 font-semibold text-blue-600 lg:mb-0 hover:text-neutral-600" title="read more"> Read More » </a>
               </div>
           </div>
           <div class="p-6">
               <img class="object-cover object-center w-full mb-8 lg:h-48 md:h-36 rounded-xl" src="https://via.placeholder.com/150" alt="blog">
 
-              <h1 class="mx-auto mb-8 text-2xl font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl">Short headline.</h1>
-              <p class="mx-auto text-base leading-relaxed text-gray-500">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>                <div class="mt-4">
+              <h1 style="font-size: 40px; color: #fff;" class="mx-auto mb-8 text-2xl font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl">Development.</h1>
+              <p style="color: #f2f2f2;" class="mx-auto text-base leading-relaxed text-gray-500">
+                Luckycoin is using Binance Smart Chain(BEP-20) and zero transaction fees.</p>                <div class="mt-4">
                   <a href="#" class="inline-flex items-center mt-4 font-semibold text-blue-600 lg:mb-0 hover:text-neutral-600" title="read more"> Read More » </a>
               </div>
           </div>
           <div class="p-6">
               <img class="object-cover object-center w-full mb-8 lg:h-48 md:h-36 rounded-xl" src="https://via.placeholder.com/150" alt="blog">
 
-              <h1 class="mx-auto mb-8 text-2xl font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl">Short headline.</h1>
-              <p class="mx-auto text-base leading-relaxed text-gray-500">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>                <div class="mt-4">
+              <h1 style="font-size: 40px; color: #fff;" class="mx-auto mb-8 text-2xl font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl">Future.</h1>
+              <p style="color: #f2f2f2;" class="mx-auto text-base leading-relaxed text-gray-500">
+                Our goal it to bw known by every young student from anywhere in the world.</p>                <div class="mt-4">
                   <a href="#" class="inline-flex items-center mt-4 font-semibold text-blue-600 lg:mb-0 hover:text-neutral-600" title="read more"> Read More » </a>
               </div>
           </div>
